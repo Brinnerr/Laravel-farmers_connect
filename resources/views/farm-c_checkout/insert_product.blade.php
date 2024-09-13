@@ -182,6 +182,6 @@ if (isset($_POST['insert_post'])) {
         }
     }
 }
- --> -->
+ 
 
 ?>
