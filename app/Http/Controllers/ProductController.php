@@ -15,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+    return view('products.index');
     }
 
     /**
@@ -74,7 +74,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product): View
     {
-        return view('products.edit', compact('product'));
+        return view('products.edit', compact('products'));
     }
 
     

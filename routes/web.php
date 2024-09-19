@@ -11,8 +11,9 @@ Route::get('/', function () {
 Route::get('/', [PagesController::class, 'index']);
 Route::get('/about', [PagesController::class, 'about'])->name('about-page');
 Route::get('/contact', [PagesController::class, 'contact'])->name('contact-page');
-Route::get('/products', [PagesController::class, 'product'])->name('product');
 Route::get('/service', [PagesController::class, 'service'])->name('service-page');
+Route::get('/products', [PagesController::class, 'products'])->name('products');
+
 
 
 Route::get('/prav', function () {
@@ -25,8 +26,13 @@ Route::get('/insertpro', function () {
     return view('farm-c_checkout.myproduct');
 });
 //product
-Route::get('/product', [ProductController::class, 'index']);
-Route::get('/product/create', [ProductController::class, 'create'])->name('create-product');
-Route::get('/store', [ProductController::class, 'store'])->name('store-product');
-Route::get('/edit', [ProductController::class, 'edit'])->name('edit-product');
-Route::get('/service', [ProductController::class, 'update'])->name('update-page');
+Route::get('/product', [ProductController::class, 'index'])->name('products.index');
+Route::get('/product/create', [ProductController::class, 'create'])->name('products.create');
+Route::get('/store', [ProductController::class, 'store'])->name('products.store');
+Route::get('/edit', [ProductController::class, 'edit'])->name('products.edit');
+Route::get('/update', [ProductController::class, 'update'])->name('products.store');
+
+
+//login4
+Route::get('/login',[UserController::class, 'login'])->name('login-page');
+Route::get('/login',[UserController::class, 'register'])->name('login-page');

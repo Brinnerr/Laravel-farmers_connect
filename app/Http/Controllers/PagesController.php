@@ -11,7 +11,7 @@ class PagesController extends Controller
      */
     public function index()
     {
-        return view("index");
+        return view("home");
     }
     
     
@@ -22,13 +22,13 @@ class PagesController extends Controller
     {
         return view("pages.contact");
     }
-    public function product()
+    public function products()
     {
         return view("pages.product");
     }
     public function service()
     {
-        return view("pages.service");
+        return view("pages.services");
     }
     
 
